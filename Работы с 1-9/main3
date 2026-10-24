@@ -1,0 +1,76 @@
+#Занятие 4. Циклы
+
+# For2
+a = int(input())
+b = int(input())
+count = 0
+for i in range(a, b + 1):
+    print(i)
+    count = count + 1
+print(count)
+
+# For4
+price = float(input())
+for i in range(1, 11):
+    print(i * price)
+
+# For5
+price = float(input())
+for i in range(1, 11):
+    weight = i * 0.1
+    print(round(weight, 1), weight * price)
+
+# For6
+price = float(input())
+for i in range(6, 11):
+    weight = i * 0.2
+    print(round(weight, 1), weight * price)
+
+# For8
+a = int(input())
+b = int(input())
+prod = 1
+for i in range(a, b + 1):
+    prod = prod * i
+print(prod)
+
+# For9
+a = int(input())
+b = int(input())
+sum_sq = 0
+for i in range(a, b + 1):
+    sum_sq = sum_sq + (i * i)
+print(sum_sq)
+
+# For11
+n = int(input())
+sum_sq = 0
+for i in range(n, 2 * n + 1):
+    sum_sq = sum_sq + (i * i)
+print(sum_sq)
+
+# For12
+n = int(input())
+prod = 1.0
+for i in range(1, n + 1):
+    multiplier = 1.0 + (i / 10.0)
+    prod = prod * multiplier
+print(prod)
+
+# For13
+n = int(input())
+total = 0.0
+sign = 1
+for i in range(1, n + 1):
+    term = 1.0 + (i / 10.0)
+    total = total + (sign * term)
+    sign = -sign
+print(total)
+
+# For15
+a = float(input())
+n = int(input())
+result = 1.0
+for i in range(n):
+    result = result * a
+print(result)

@@ -1,0 +1,66 @@
+#Занятие 6. Ошибки и защита
+
+# Err2
+a = int(input())
+b = int(input())
+try:
+    result = a / b
+    print(f"{result:.1f}")
+except ZeroDivisionError:
+    print("Делить на ноль нельзя")
+
+# Err5
+text = input()
+index = int(input())
+try:
+    print(text[index])
+except IndexError:
+    print("Нет такого символа")
+
+# Err6
+text = input()
+index_str = input()
+try:
+    index = int(index_str)
+    try:
+        print(text[index])
+    except IndexError:
+        print("Нет такого символа")
+except ValueError:
+    print("Ошибка ввода")
+
+# Err7
+while True:
+    try:
+        num = int(input())
+        print(num)
+        break
+    except ValueError:
+        print("Это не число. Попробуй ещё:")
+
+# Err9
+age = int(input())
+try:
+    if age < 0 or age > 120:
+        raise ValueError("Возраст вне допустимого диапазона")
+    print(f"Принято: {age}")
+except ValueError as e:
+    print(f"Отклонено: {e}")
+
+# Err11
+a = float(input())
+b = float(input())
+try:
+    result = a / b
+except (ZeroDivisionError, ValueError):
+    print("Посчитать не удалось")
+else:
+    print(f"{result:.2f}")
+
+# Err12
+try:
+    num = int(input())
+    print(num)
+except Exception as e:
+    print(e)
+    print(type(e))

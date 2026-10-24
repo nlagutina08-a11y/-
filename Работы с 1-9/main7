@@ -1,0 +1,89 @@
+#Урок 8. Списки глубже: сортировка и генераторы
+
+# List17
+n = int(input())
+a = []
+for i in range(n):
+    a.append(int(input()))
+print(sorted(a))
+print(a)
+
+# List19
+n = int(input())
+a = []
+for i in range(n):
+    a.append(input())
+sorted_a = sorted(a, key=len)
+print(sorted_a)
+print(sorted_a[-1])
+
+# List21
+n = int(input())
+a = []
+for i in range(n):
+    a.append(int(input()))
+b = [x for x in a if x > 0]
+print(b)
+print(len(b))
+
+# List22
+n = int(input())
+a = []
+for i in range(n):
+    a.append(int(input()))
+d = int(input())
+b = [x * d for x in a]
+print(b)
+print(a.count(d))
+
+# List23
+n = int(input())
+a = []
+for i in range(n):
+    a.append(int(input()))
+print(sorted(a, key=abs, reverse=True))
+
+# List25
+n = int(input())
+a = []
+for i in range(n):
+    a.append(int(input()))
+a.sort()
+print(a[-2])
+
+# List26
+n = int(input())
+a = []
+for i in range(n):
+    a.append(int(input()))
+srednee = sum(a) / n
+b = [x for x in a if x > srednee]
+print(b)
+print(srednee)
+
+# List28
+n = int(input())
+a = []
+for i in range(n):
+    a.append(input())
+letter = input()
+b = [s for s in a if s.startswith(letter)]
+print(b)
+
+# List29
+n = int(input())
+a = []
+for i in range(n):
+    a.append(int(input()))
+k = int(input())
+a.sort(reverse=True)
+print(a[:k])
+
+# List30
+n = int(input())
+a = []
+for i in range(n):
+    a.append(input())
+dliny = [len(s) for s in a]
+print(dliny)
+print(sum(dliny))

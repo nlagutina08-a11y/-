@@ -1,0 +1,115 @@
+#Урок 7. Списки и random
+
+# List2
+n = int(input())
+a = []
+for i in range(n):
+    a.append(int(input()))
+k = int(input())
+print(a[k])
+print(a[-1])
+print(k)
+
+# List3
+n = int(input())
+a = []
+for i in range(n):
+    a.append(int(input()))
+summa = 0
+proizv = 1
+for i in range(0, n, 2):
+    summa = summa + a[i]
+    proizv = proizv * a[i]
+print(summa, proizv)
+
+# List5
+n = int(input())
+a = []
+for i in range(n):
+    a.append(int(input()))
+d = int(input())
+a.append(d)
+print(a)
+print(len(a))
+
+# List7
+n = int(input())
+a = []
+for i in range(n):
+    a.append(int(input()))
+print(a[::-1])
+print(a)
+
+# List9
+n = int(input())
+a = []
+for i in range(n):
+    a.append(int(input()))
+summa = 0
+for x in a:
+    summa = summa + x
+srednee = summa / n
+count = 0
+for x in a:
+    if x > srednee:
+        print(x)
+        count = count + 1
+print(count)
+
+# List10
+n = int(input())
+a = []
+for i in range(n):
+    a.append(input())
+max_s = a[0]
+min_s = a[0]
+for s in a:
+    if len(s) > len(max_s):
+        max_s = s
+    if len(s) < len(min_s):
+        min_s = s
+print(max_s, len(max_s))
+print(min_s, len(min_s))
+
+# List12
+n = int(input())
+a = []
+for i in range(n):
+    a.append(int(input()))
+k = int(input())
+a.insert(k, 0)
+print(a)
+print(len(a))
+
+# List13
+n = int(input())
+a = []
+for i in range(n):
+    a.append(int(input()))
+udalennyi = a.pop()
+print(udalennyi)
+print(a)
+
+# List14
+n = int(input())
+a = []
+for i in range(n):
+    a.append(int(input()))
+d = int(input())
+count = a.count(d)
+if count > 0:
+    index = a.index(d)
+else:
+    index = -1
+print(count, index)
+
+# List15
+n = int(input())
+a = []
+for i in range(n):
+    a.append(int(input()))
+summa = 0
+for i in range(1, n, 2):
+    print(a[i])
+    summa = summa + a[i]
+print(summa)

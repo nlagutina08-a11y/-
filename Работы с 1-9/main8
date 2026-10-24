@@ -1,0 +1,134 @@
+#Урок 9. Функции: параметры, return, локальные, переменные
+
+# Proc2
+def power_a234(a):
+    return a**2, a**3, a**4
+
+for i in range(5):
+    a = float(input())
+    p2, p3, p4 = power_a234(a)
+    print(p2, p3, p4)
+
+# Proc4
+import math
+
+def triangle_ps(a):
+    p = 3 * a
+    s = (a**2 * math.sqrt(3)) / 4
+    return p, s
+
+for i in range(3):
+    a = float(input())
+    p, s = triangle_ps(a)
+    print(p, s)
+
+# Proc5
+def rect_ps(x1, y1, x2, y2):
+    a = abs(x2 - x1)
+    b = abs(y2 - y1)
+    p = 2 * (a + b)
+    s = a * b
+    return p, s
+
+for i in range(3):
+    x1 = float(input())
+    y1 = float(input())
+    x2 = float(input())
+    y2 = float(input())
+    p, s = rect_ps(x1, y1, x2, y2)
+    print(p, s)
+
+# Proc7
+def invert_digits(k):
+    k_str = str(k)
+    inverted = k_str[::-1]
+    return int(inverted)
+
+for i in range(5):
+    k = int(input())
+    print(invert_digits(k))
+
+# Proc8
+def add_right_digit(d, k):
+    return k * 10 + d
+
+k = int(input())
+d1 = int(input())
+d2 = int(input())
+
+k = add_right_digit(d1, k)
+print(k)
+k = add_right_digit(d2, k)
+print(k)
+
+# Proc9
+def add_left_digit(d, k):
+    k_str = str(k)
+    return int(str(d) + k_str)
+
+k = int(input())
+d1 = int(input())
+d2 = int(input())
+
+k = add_left_digit(d1, k)
+print(k)
+k = add_left_digit(d2, k)
+print(k)
+
+# Proc11
+def minmax(x, y):
+    if x < y:
+        return x, y
+    else:
+        return y, x
+
+a = float(input())
+b = float(input())
+c = float(input())
+d = float(input())
+
+min1, max1 = minmax(a, b)
+min2, max2 = minmax(c, d)
+min_all, _ = minmax(min1, min2)
+_, max_all = minmax(max1, max2)
+
+print(min_all, max_all)
+
+# Proc13
+def sort_dec3(a, b, c):
+    if a < b:
+        a, b = b, a
+    if a < c:
+        a, c = c, a
+    if b < c:
+        b, c = c, b
+    return a, b, c
+
+for i in range(2):
+    a = float(input())
+    b = float(input())
+    c = float(input())
+    x, y, z = sort_dec3(a, b, c)
+    print(x, y, z)
+
+# Proc14
+def shift_right3(a, b, c):
+    return c, a, b
+
+for i in range(2):
+    a = float(input())
+    b = float(input())
+    c = float(input())
+    x, y, z = shift_right3(a, b, c)
+    print(x, y, z)
+
+# Proc15
+def shift_left3(a, b, c):
+    return b, c, a
+
+for i in range(2):
+    a = float(input())
+    b = float(input())
+    c = float(input())
+    x, y, z = shift_left3(a, b, c)
+    print(x, y, z)
